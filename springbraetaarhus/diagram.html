@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light2",
+	title:{
+		text: "Unge med behov for STU i Midtjylland"
+	},
+	axisY:{
+        includeZero: false,
+        valueFormatString:"####",
+    },
+    axisX:{
+           valueFormatString:"####",
+        },
+	data: [{        
+        type: "line",
+        lineColor:"green",
+        markerType:"none", 
+        lineThickness: 5,
+        yValueFormatString: "$####.00",      
+		dataPoints: [
+			{ x: 2007, y: 82 },
+			{ x: 2008, y: 220 },
+			{ x: 2009, y: 411 },
+			{ x: 2010, y: 596 },
+			{ x: 2011, y: 711 },
+			{ x: 2012, y: 748 },
+			{ x: 2013, y: 874 },
+			{ x: 2014, y: 1001 },
+			{ x: 2015, y: 1114 },
+			{ x: 2016, y: 1198 },
+			{ x: 2017, y: 1325 },
+		
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
