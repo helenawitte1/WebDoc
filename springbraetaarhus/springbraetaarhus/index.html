@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Webdok: Springbræt Aarhus</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>  
+    <script src="js/script.js"></script> 
+
+</head>
+<body>
+    <div class="container">
+
+        <!-- Reading position indicator--> 
+    <progress value="1"> 
+            <div class="progress-container">
+            <span class="progress-bar"></span>
+              </div></progress>
+    
+    <!-- Reading position indicator slut-->
+        
+        <div class="title">
+            <img class="logo" src="img/logoforslag2.jpg">
+        </div>
+
+    <section class="blooper">
+            <video id="myVideo">     
+                <source src="video/skoyter.mp4" type= "video/mp4">
+            </video>
+        </section>
+    
+    <br>
+    <br>
+    
+
+
+
+
+
+<!--Informationsbokse-->    
+<div class="flex_container">
+    <li> 
+<div class="boks"id="item1" onclick="myfunktion()">Hverdagen på Springbræt Aarhus</div>
+ </li>
+<li>
+<div class="boks" id="item2" onclick="myfunktion()">Hvad er pædagogisk STU?</div>
+</li>
+<li>
+<div class="boks" id="item3" onclick="myfunktion()">Mød en lærer</div>
+</li>
+
+</div>
+   
+<!--Billede-->  
+<div class="ist parallax">
+    <div class="bg">
+    </div>
+</div>
+
+<!--Statistik-->
+<br>
+<script>
+window.onscroll = function () {
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        theme: "light2",
+        title:{
+            text: "Unge med behov for STU i Midtjylland"
+        },
+        axisY:{
+            includeZero: false,
+            valueFormatString:"####",
+        },
+        axisX:{
+               valueFormatString:"####",
+            },
+        data: [{        
+            type: "line",
+            lineColor:"green",
+            markerType:"none", 
+            lineThickness: 5,
+            yValueFormatString: "$####.00",      
+            dataPoints: [
+                { x: 2007, y: 82 },
+                { x: 2008, y: 220 },
+                { x: 2009, y: 411 },
+                { x: 2010, y: 596 },
+                { x: 2011, y: 711 },
+                { x: 2012, y: 748 },
+                { x: 2013, y: 874 },
+                { x: 2014, y: 1001 },
+                { x: 2015, y: 1114 },
+                { x: 2016, y: 1198 },
+                { x: 2017, y: 1325 },
+            
+            ]
+        }]
+    });
+    chart.render();
+    
+    }
+    </script>
+    </head>
+    <body>
+    <div id="chartContainer" style="height: 500px; width: 100%; padding-top: 90px; padding-bottom: 50px;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+<br>
+<div class="ist parallax">
+        <div class="bg">
+        </div>
+    </div>
+
+
+<div class="fir parallax">
+        <div class="bg">
+        </div>
+
+<p class="citat"> Hej mit navn er Helena Witte</p>
+
+
+
+
+
+     <div class="ist parallax">
+        <div class="bg">
+        </div>
+    </div>
+    
+
+     <div class="fir parallax">
+        <div class="bg">
+        </div>
+    </div>
+    
+    </div>
+     <script src="js/script.js"></script>
+</body>
+</html>
